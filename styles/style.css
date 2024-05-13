@@ -1,8 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Noto+Serif+HK:wght@200..900&display=swap');
 body{
 	background-color: #F4EEE4;
 }
 
-h1{
+*{
+	box-sizing: border-box;
+}
+
+header, main, footer{
+	width: 1700px;
 	margin: auto;
-	width: 700px;
+}
+
+section{
+	max-width: 1250px;
+	margin: auto;
+}
+
+h1{
+	font-size: 48px;
+	margin: auto;
+	width: 900px;
+	text-align: center;
+	font-family: "Noto Serif HK", serif;
+	font-weight: 300;
+	margin-top: -30px;
+}
+
+.logo{
+	display: block;
+	margin: auto;
+}
+hr{
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 1px;
+	border-color: #424530;
+	margin: 0;
+}
+
+.flex-box{
+	display: flex;
+	justify-content:space-between;
+}
+
+.nav-container{
+	background-color: #fff;
+	width: 930px;
+	height: 485px;
+	margin-top: 100px;
+	padding: 30px;
+}
+
+h2{
+	margin: auto;
+	text-align: center;
+	font-weight: 400;
+	font-size: 32px;
+}
+
+nav{
+	margin: 50px 0;
+}
+
+nav li{
+	display: flex;
+	height: 52px;
+	margin: 35px 25px;
+	align-items: center;
+}
+
+nav li a{
+	text-decoration: none;
+	display: inline-block;
+	color: black;
+	vertical-align: middle;
+	font-size: 24px;
+	font-weight: 500;
+	font-family: "Noto Serif HK", serif;
+	height: 40px;
+}
+
+.nav-hr{
+	width: 0px;
+	height: 100%;
+	border-width: 1px;
+	border-radius: 10px;
+	margin: 0 8px;
+}
+
+.nav-number{
+	font-family: "Italianno", cursive;
+	color: #424530;
+	font-size: 40px;
+	font-weight: 900;
+	margin: 0;
+	width: 40px;
+	text-align: center;
 }
