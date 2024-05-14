@@ -358,10 +358,44 @@ article li::marker{
 }
 
 .slider-inner{
+	position: relative;
 	height: 700px;
 	background-color: #424530;
+	overflow: hidden;
 }
 
+.slider-line{
+	transition: 0.5s;
+	left: 0;
+	display: flex;
+	position: absolute;
+	height: 700px;
+}
+
+.slide{
+	height: 700px;
+	width: 700px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.sl-1{
+	background-color: aqua;
+}
+
+.sl-2{
+	background-color: rgb(21, 255, 0);
+}
+.sl-3{
+	background-color: rgb(255, 0, 119);
+}
+.sl-4{
+	background-color: rgb(58, 48, 102);
+}
+
+.sl-5{
+	background-color: rgb(255, 60, 0);
+}
 
 footer{
 	background-color: #424530;

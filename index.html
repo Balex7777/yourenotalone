@@ -34,16 +34,16 @@
 						<div class="hidden-hr" style="min-width: 270px; background-color: white;"></div>
 					</div>
 					<nav>
-						<li><p class="nav-number">01</p><hr class="nav-hr"><a href="#" title="abob">О нас</a></li>
-						<li><p class="nav-number">02</p><hr class="nav-hr"><a href="#" title="abob">Что такое психология и что она изучаетс</a></li>
-						<li><p class="nav-number">03</p><hr class="nav-hr"><a href="#" title="abob">С какими вопросами можно обратиться к психологу</a></li>
-						<li><p class="nav-number">04</p><hr class="nav-hr"><a href="#" title="abob">Источники психологической помощи</a></li>
+						<li><p class="nav-number">01</p><hr class="nav-hr"><a href="#about-us" title="abob">О нас</a></li>
+						<li><p class="nav-number">02</p><hr class="nav-hr"><a href="#psychology" title="abob">Что такое психология и что она изучаетс</a></li>
+						<li><p class="nav-number">03</p><hr class="nav-hr"><a href="#questions" title="abob">С какими вопросами можно обратиться к психологу</a></li>
+						<li><p class="nav-number">04</p><hr class="nav-hr"><a href="#source" title="abob">Источники психологической помощи</a></li>
 					</nav>
 				</div>
 				<div class="nav-photo"></div>
 			</div>
 		</section>
-		<section style="margin-top: 180px;">
+		<section style="margin-top: 180px;" id="about-us">
 			<h2>О НАС</h2>
 			<div class="flex-box" style="margin: -22px 0 50px;">
 				<hr>
@@ -72,7 +72,7 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="psychology">
 			<h2 style="width: 570px; margin-right: calc(50% - 495px);">ЧТО ТАКОЕ ПСИХОЛОГИЯ И ЧТО ОНА ИЗУЧАЕТ</h2>
 			<div class="flex-box" style="margin: -45px 0 50px;">
 				<hr width="100%">
@@ -94,7 +94,7 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="questions">
 			<h2 style="width: 540px; margin-left: calc(50% - 570px);">С КАКИМИ ВОПРОСАМИ МОЖНО ОБРАТИТЬСЯ К ПСИХОЛОГУ</h2>
 			<div class="flex-box" style="margin: -75px 0 50px;">
 				<hr>
@@ -156,7 +156,7 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="source">
 			<h2 style="width: 760px;">Источники психологической помощи</h2>
 			<div class="flex-box" style="margin: -50px 0 50px;">
 				<hr>
@@ -538,15 +538,21 @@
 			</div>
 			<div class="in-section">
 				<div class="slider">
-					<button>
+					<button id="btn-left">
 						<svg width="26" height="46" viewBox="0 0 26 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0.972696 20.8787C-0.198877 22.0503 -0.198877 23.9497 0.972696 25.1213L20.0646 44.2132C21.2362 45.3848 23.1356 45.3848 24.3072 44.2132C25.4788 43.0416 25.4788 41.1421 24.3072 39.9706L7.33666 23L24.3072 6.02944C25.4788 4.85786 25.4788 2.95837 24.3072 1.7868C23.1356 0.615223 21.2362 0.615223 20.0646 1.7868L0.972696 20.8787ZM3.09412 20H3.09402L3.09402 26H3.09412L3.09412 20Z" fill="#424530"/>
 						</svg>
 					</button>
 					<div class="slider-inner">
-
+						<div class="slider-line">
+							<div class="slide sl-1"></div>
+							<div class="slide sl-2"></div>
+							<div class="slide sl-3"></div>
+							<div class="slide sl-4"></div>
+							<div class="slide sl-5"></div>
+						</div>
 					</div>
-					<button>
+					<button id="btn-right">
 						<svg width="26" height="46" viewBox="0 0 26 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M25.1214 25.1213C26.293 23.9497 26.293 22.0503 25.1214 20.8787L6.02954 1.7868C4.85796 0.615223 2.95847 0.615223 1.7869 1.7868C0.615324 2.95837 0.615324 4.85786 1.7869 6.02944L18.7575 23L1.7869 39.9706C0.615324 41.1421 0.615324 43.0416 1.7869 44.2132C2.95847 45.3848 4.85796 45.3848 6.02954 44.2132L25.1214 25.1213ZM23 26H23.0001V20H23V26Z" fill="#424530"/>
 						</svg>
@@ -569,5 +575,19 @@
 			this.parentNode.classList.toggle("active");
 		})
 	}
+	const btnLeft = document.getElementById("btn-left")
+	const btnRight = document.getElementById("btn-right")
+	const slider = document.querySelector(".slider-line")
+	let offset = 0;
+	btnRight.addEventListener('click', function(){
+		offset -= 700
+		if(offset < -700 * 4) offset = 0;
+		slider.style.left = offset + "px";
+	})
+	btnLeft.addEventListener('click', function(){
+		offset += 700
+		if(offset > 0) offset = -700 * 4;
+		slider.style.left = offset + "px";
+	})
 </script>
 </html>
