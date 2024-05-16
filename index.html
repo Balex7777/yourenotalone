@@ -71,8 +71,8 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section id="psychology">
+		</section class="element-animation">
+		<section id="psychology" class="element-animation">
 			<h2 class="psychology-h">ЧТО ТАКОЕ ПСИХОЛОГИЯ И ЧТО ОНА ИЗУЧАЕТ</h2>
 			<div class="flex-box" style="margin: -45px 0 50px;">
 				<hr width="100%">
@@ -94,7 +94,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="questions">
+		<section id="questions" class="element-animation">
 			<h2 class="questions-h">С КАКИМИ ВОПРОСАМИ МОЖНО ОБРАТИТЬСЯ К ПСИХОЛОГУ</h2>
 			<div class="flex-box" style="margin: -75px 0 50px;">
 				<hr>
@@ -163,7 +163,7 @@
 				<div class="hidden-hr" style="min-width: 770px;"></div>
 			</div>
 			<div class="in-section">
-				<article>
+				<article  class="element-animation">
 					<div class="art-child">
 						<h3>Помощь рядом</h3>
 						<hr class="dot">
@@ -231,7 +231,7 @@
 					</div>
 				</article>
 				<hr class="source-hr">
-				<article>
+				<article  class="element-animation">
 					<div class="art-child">
 						<h3>Ярославна</h3>
 						<hr class="dot">
@@ -277,7 +277,7 @@
 					</div>
 				</article>
 				<hr class="source-hr">
-				<article>
+				<article  class="element-animation">
 					<div class="art-child">
 						<h3 style="font-size: 90px;">Я родитель</h3>
 						<hr class="dot">
@@ -296,6 +296,7 @@
 						<p>родители детей и подростков.
 						</p>
 						<a href="#">перейти на сайт</a>
+						<img class="article-img-1">
 					</div>
 					<div class="art-child">
 						<div class="mark">
@@ -354,7 +355,7 @@
 					</div>
 				</article>
 				<hr class="source-hr">
-				<article>
+				<article  class="element-animation">
 					<div class="art-child">
 						<h3 style="font-size: 55px; line-height: 55px; margin-bottom: 30px; font-weight: 600;">Помогая другим - помогаешь себе</h3>
 						<hr class="dot">
@@ -414,7 +415,7 @@
 					</div>
 				</article>
 				<hr class="source-hr">
-				<article>
+				<article  class="element-animation">
 					<div class="art-child">
 						<h3 style="font-size: 70px; line-height: 70px; margin-bottom: 30px;">Консультации магистрантов НИУ ВШЭ						</h3>
 						<hr class="dot">
@@ -469,7 +470,7 @@
 					</div>
 				</article>
 				<hr class="source-hr">
-				<article>
+				<article  class="element-animation">
 					<div class="art-child">
 						<h3>PsySovet</h3>
 						<hr class="dot">
@@ -530,7 +531,7 @@
 				</article>
 			</div>
 		</section>
-		<section>
+		<section  class="element-animation">
 			<h2 style="width: 560px;">советы, которые могут вам помочь</h2>
 			<div class="flex-box" style="margin: -50px 0 50px;">
 				<hr>
@@ -569,16 +570,19 @@
 	</footer>
 </body>
 <script>
+	// details
 	const btns = document.getElementsByClassName("question-btn")
 	for(i = 0; i < btns.length; i++){
 		btns[i].addEventListener('click', function(){
 			this.parentNode.classList.toggle("active");
 		})
 	}
+
+	// Слайдер
 	const btnLeft = document.getElementById("btn-left")
 	const btnRight = document.getElementById("btn-right")
 	const slider = document.querySelector(".slider-line")
-	let offset = 0;
+	let offset = -2 * 700;
 	btnRight.addEventListener('click', function(){
 		offset -= 700
 		if(offset < -700 * 4) offset = 0;
@@ -588,6 +592,68 @@
 		offset += 700
 		if(offset > 0) offset = -700 * 4;
 		slider.style.left = offset + "px";
+	})
+
+	// Скролл к секциям
+	const anchors = document.querySelectorAll('a[href*="#"]')
+	for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    const blockID = anchor.getAttribute('href').substr(1)
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+
+	// Появление
+	function onEntry(entry) {
+		entry.forEach(change => {
+			if (change.isIntersecting) {
+			change.target.classList.add('element-show');
+			}
+		});
+	}
+
+	let options = {
+		threshold: [0.5] };
+	let observer = new IntersectionObserver(onEntry, options);
+	let elements = document.querySelectorAll('.element-animation');
+
+	for (let elm of elements) {
+		observer.observe(elm);
+	}
+
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+<script>
+	SmoothScroll({
+		// Время скролла 400 = 0.4 секунды
+		animationTime : 800,
+		// Размер шага в пикселях
+		stepSize : 75,
+
+		// Дополнительные настройки:
+
+		// Ускорение
+		accelerationDelta : 30,
+		// Максимальное ускорение
+		accelerationMax : 2,
+
+		// Поддержка клавиатуры
+		keyboardSupport : true,
+		// Шаг скролла стрелками на клавиатуре в пикселях
+		arrowScroll : 50,
+
+		// Pulse (lаess tweakable)
+		// ratio of "tail" to "acceleration"
+		pulseAlgorithm : true,
+		pulseScale : 4,
+		pulseNormalize : 1,
+
+		// Поддержка тчпада
+		touchpadSupport : true,
 	})
 </script>
 </html>
