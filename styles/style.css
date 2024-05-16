@@ -213,6 +213,7 @@ p{
 	width: 100%;
 	text-align: left;
 	padding: 0;
+	color: #000;
 }
 
 .question.active p{
