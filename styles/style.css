@@ -668,6 +668,9 @@ footer{
 	.note{
 		width: 100%;
 	}
+	.art-child{
+		padding: 15px;
+	}
 }
 
 @media (max-width: 600px){
@@ -701,5 +704,8 @@ footer{
 	}
 	#btn-left svg{
 		width: 10px;
+	}
+	.question.active p{
+		height: 100px;
 	}
 }
