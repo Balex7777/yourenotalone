@@ -157,7 +157,7 @@
 			</div>
 		</section>
 		<section id="source">
-			<h2 style="width: 760px;">Источники психологической помощи</h2>
+			<h2 class="h-source">Источники психологической помощи</h2>
 			<div class="flex-box" style="margin: -50px 0 50px;">
 				<hr>
 				<div class="hidden-hr" style="min-width: 770px;"></div>
@@ -279,7 +279,7 @@
 				<hr class="source-hr">
 				<article  class="element-animation">
 					<div class="art-child">
-						<h3 style="font-size: 90px;">Я родитель</h3>
+						<h3 сlass="h-3">Я родитель</h3>
 						<hr class="dot">
 						<div class="info">
 							<svg style="position:absolute; top:0" width="27" height="27" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -357,7 +357,7 @@
 				<hr class="source-hr">
 				<article  class="element-animation">
 					<div class="art-child">
-						<h3 style="font-size: 55px; line-height: 55px; margin-bottom: 30px; font-weight: 600;">Помогая другим - помогаешь себе</h3>
+						<h3 class="h-4">Помогая другим - помогаешь себе</h3>
 						<hr class="dot">
 						<div class="info">
 							<svg style="position:absolute; top:0" width="27" height="27" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -417,7 +417,7 @@
 				<hr class="source-hr">
 				<article  class="element-animation">
 					<div class="art-child">
-						<h3 style="font-size: 70px; line-height: 70px; margin-bottom: 30px;">Консультации магистрантов НИУ ВШЭ						</h3>
+						<h3 class="h-5">Консультации магистрантов НИУ ВШЭ						</h3>
 						<hr class="dot">
 						<span>Кто создал:</span>
 						<p>Факультет социальных наук НИУ ВШЭ. В этом проекте помощь оказывают студенты и выпускники магистерской программы «Психоанализ и психоаналитическая психотерапия» Высшей школы экономики.						</p>
@@ -532,7 +532,7 @@
 			</div>
 		</section>
 		<section  class="element-animation">
-			<h2 style="width: 560px;">советы, которые могут вам помочь</h2>
+			<h2 class="h-slider">советы, которые могут вам помочь</h2>
 			<div class="flex-box" style="margin: -50px 0 50px;">
 				<hr>
 				<div class="hidden-hr" style="min-width: 530px;"></div>
@@ -582,15 +582,16 @@
 	const btnLeft = document.getElementById("btn-left")
 	const btnRight = document.getElementById("btn-right")
 	const slider = document.querySelector(".slider-line")
-	let offset = -2 * 700;
+	const slide = document.querySelector(".slide")
+	let offset = 0;
 	btnRight.addEventListener('click', function(){
-		offset -= 700
-		if(offset < -700 * 4) offset = 0;
+		offset -= slide.offsetWidth
+		if(offset < -slide.offsetWidth * 4) offset = 0;
 		slider.style.left = offset + "px";
 	})
 	btnLeft.addEventListener('click', function(){
-		offset += 700
-		if(offset > 0) offset = -700 * 4;
+		offset += slide.offsetWidth
+		if(offset > 0) offset = -slide.offsetWidth * 4;
 		slider.style.left = offset + "px";
 	})
 

@@ -366,7 +366,7 @@ article li::marker{
 
 .slider-line{
 	transition: 0.5s;
-	left: -1400px;
+	left: 0px;
 	display: flex;
 	position: absolute;
 	height: 700px;
@@ -380,15 +380,16 @@ article li::marker{
 	background-size: contain;
 }
 
-.sl-1{
-	background-image: url(img/photo_2024-04-03_21-25-34.jpg);
-}
 
+.sl-1{
+	background-image: url(img/download_image_1714643894809\ 1.png);
+}
 .sl-2{
 	background-image: url(img/download_image_1714643122790\ 1.png);
 }
+
 .sl-3{
-	background-image: url(img/download_image_1714643894809\ 1.png);
+	background-image: url(img/photo_2024-04-03_21-25-34.jpg);
 }
 .sl-4{
 	background-image: url(img/download_image_1714644000945\ 1.png)
@@ -455,6 +456,25 @@ footer{
 	background-image: url(img/image\ 7.png);
 }
 
+.h-source{
+	width: 760px;
+}
+.h-slider{
+	width: 560px;
+}
+
+.h-3{
+	font-size: 90px;
+}
+
+.h-4{
+	font-size: 55px; line-height: 55px; margin-bottom: 30px; font-weight: 600;
+}
+
+.h-5{
+	font-size: 70px; line-height: 70px; margin-bottom: 30px;
+}
+
 @media (max-width: 1300px){
 	main{
 		padding: 30px;
@@ -484,6 +504,11 @@ footer{
 	.question-photo{
 		margin: 20px;
 	}
+	.article-img-1{
+		height: 0;
+		margin: 0;
+		width: 0;
+	}
 }
 
 @media (max-width: 1100px){
@@ -501,7 +526,104 @@ footer{
 		width: 600px;
 		margin: 30px auto;
 	}
-	.nav{
+	.nav-container{
+		width: auto;
 		max-width: 900px;
+	}
+}
+
+@media (max-width: 1000px){
+	h1{
+		font-size: 30px;
+		width: 100%;
+	}
+	h2{
+		width: 100%;
+		font-size: 24px;
+		line-height: 35px;
+	}
+	.psychology-h{
+		width: 100%;
+	}
+	.questions-h{
+		width: 100%;
+	}
+	.h-source{
+		width: 100%;
+	}
+	.h-slider{
+		width: 100%;
+	}
+	.nav-container a{
+		font-size: 16px;
+	}
+	.nav-number{
+		font-size: 30px;
+	}
+	nav li{
+		height: 40px;
+	}
+	p{
+		font-size: 16px;
+	}
+	article li{
+		font-size: 16PX;
+	}
+	.note p{
+		font-size: 16px;
+		margin: 20px 0 20px 40px;
+	}
+	.note span{
+		font-size: 150px
+	}
+	.note{
+		height: auto;
+		width: 100%;
+	}
+	.question-btn{
+		font-size: 16px;
+	}
+	.question.active p{
+		height: 80px;
+	}
+	.slider{
+		width: 600px;
+		grid-template-columns: 50px 500px 50px;
+	}
+	.slide{
+		width: 500px;
+		height: 500px;
+	}
+	.slider-inner{
+		height: 500px;
+	}
+	.in-footer p{
+		font-size: 10px;
+	}
+	.in-footer{
+		padding: 0 10px;
+	}
+	.flex-box{
+		display: none;
+	}
+}
+
+@media (max-width: 700px){
+	.slider{
+		margin-top: 50px;
+		width: 400px;
+		grid-template-columns: 50px 300px 50px;
+	}
+	.slide{
+		width: 300px;
+		height: 300px;
+	}
+	.slider-inner{
+		height: 300px;
+	}
+	h3, .h-3, .h-4, .h-5{
+		font-size: 40px;
+		line-height: 40px;
+		width: auto;
 	}
 }
