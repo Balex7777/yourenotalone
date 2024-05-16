@@ -475,6 +475,14 @@ footer{
 	font-size: 70px; line-height: 70px; margin-bottom: 30px;
 }
 
+#about-us{
+	margin-top: 180px;
+}
+
+.h-nav{
+	color: #424530; font-size: 32px;
+}
+
 @media (max-width: 1300px){
 	main{
 		padding: 30px;
@@ -530,6 +538,9 @@ footer{
 		width: auto;
 		max-width: 900px;
 	}
+	.question-photo{
+		display: none;
+	}
 }
 
 @media (max-width: 1000px){
@@ -554,20 +565,32 @@ footer{
 	.h-slider{
 		width: 100%;
 	}
+	.h-nav{
+		font-size: 24px;
+	}
 	.nav-container a{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		line-height: 40px;
 		font-size: 16px;
+	}
+	.nav-container{
+		margin-top: 30px;
+		height: 420px;
 	}
 	.nav-number{
 		font-size: 30px;
 	}
 	nav li{
 		height: 40px;
+		margin: 30px auto ;
 	}
 	p{
 		font-size: 16px;
 	}
 	article li{
-		font-size: 16PX;
+		font-size: 16px;
 	}
 	.note p{
 		font-size: 16px;
@@ -606,6 +629,12 @@ footer{
 	.flex-box{
 		display: none;
 	}
+	.nav-photo{
+		display: none;
+	}
+	#about-us{
+		margin-top: 50px;
+	}
 }
 
 @media (max-width: 700px){
@@ -625,5 +654,49 @@ footer{
 		font-size: 40px;
 		line-height: 40px;
 		width: auto;
+	}
+	.nav-container{
+		padding: 20px 10px;
+	}
+	.logo{
+		margin-top: -20px;
+		width: 200px;
+	}
+	h1{
+		margin-top: -60px;
+	}
+}
+
+@media (max-width: 600px){
+	main{
+		padding: 15px;
+	}
+	.slider{
+		margin-top: 50px;
+		width: 340px;
+		grid-template-columns: 20px 300px 20px;
+	}
+	.slide{
+		width: 300px;
+		height: 300px;
+	}
+	.slider-inner{
+		height: 300px;
+	}
+	.nav-container{
+		padding: 20px 5px;
+	}
+	.nav-number{
+		width: 20px;
+		font-size: 20px;
+	}
+	.nav-container a{
+		font-size: 14px;
+	}
+	#btn-right svg{
+		width: 10px;
+	}
+	#btn-left svg{
+		width: 10px;
 	}
 }

@@ -28,7 +28,7 @@
 		<section>
 			<div class="in-section">
 				<div class="nav-container">
-					<h2 style="color: #424530; font-size: 32px;">СОДЕРЖАНИЕ</h2>
+					<h2 class="h-nav">СОДЕРЖАНИЕ</h2>
 					<div class="flex-box" style="margin-top: -23px; padding: 0 20px;">
 						<hr width="280">
 						<div class="hidden-hr" style="min-width: 270px; background-color: white;"></div>
@@ -43,7 +43,7 @@
 				<div class="nav-photo"></div>
 			</div>
 		</section>
-		<section style="margin-top: 180px;" id="about-us">
+		<section id="about-us">
 			<h2>О НАС</h2>
 			<div class="flex-box" style="margin: -22px 0 50px;">
 				<hr>
@@ -615,9 +615,10 @@
 			}
 		});
 	}
-
-	let options = {
-		threshold: [0.5] };
+	let options;
+	if(document.offsetWidth < 700)	options = {threshold: [0.1] };
+	else options = {threshold: [0.1] };
+	
 	let observer = new IntersectionObserver(onEntry, options);
 	let elements = document.querySelectorAll('.element-animation');
 
