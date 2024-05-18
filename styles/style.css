@@ -520,6 +520,24 @@ footer{
 	}
 }
 
+.author-photo-1{
+	border: 2px solid #424530;
+	background-size: cover;
+	background-image: url(img/photo_2024-05-18_22-37-13.jpg);
+}
+
+.author-photo-2{
+	border: 2px solid #424530;
+	background-size: cover;
+	background-image: url(img/photo_2024-05-17_12-39-35.jpg);
+}
+
+.author-photo-3{
+	border: 2px solid #424530;
+	background-size: cover;
+	background-image: url(img/photo_2024-05-19_00-11-52.jpg);
+}
+
 @media (max-width: 1100px){
 	.authors{
 		display: block;
