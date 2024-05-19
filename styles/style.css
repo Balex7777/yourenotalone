@@ -522,8 +522,9 @@ footer{
 
 .author-photo-1{
 	border: 2px solid #424530;
-	background-size: cover;
-	background-image: url(img/photo_2024-05-18_22-37-13.jpg);
+	background-size: 370px;
+	background-position: -20px -40px;
+	background-image: url(img/photo_2024-05-19_20-43-08.jpg);
 }
 
 .author-photo-2{
@@ -564,13 +565,22 @@ footer{
 
 @media (max-width: 1000px){
 	h1{
+		font-weight: 700;
 		font-size: 30px;
 		width: 100%;
 	}
 	h2{
+		font-weight: 700;
 		width: 100%;
-		font-size: 24px;
-		line-height: 35px;
+		font-size: 30px;
+		line-height: 40px;
+		color: #424530;
+	}
+	h3, .h-3, .h-4, .h-5{
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: 700;
+		width: auto;
 	}
 	.psychology-h{
 		width: 100%;
@@ -606,6 +616,12 @@ footer{
 		margin: 30px auto ;
 	}
 	p{
+		font-size: 16px;
+	}
+	article span{
+		font-size: 16px;
+	}
+	article a{
 		font-size: 16px;
 	}
 	article li{
@@ -644,8 +660,12 @@ footer{
 	.in-footer{
 		padding: 0 10px;
 	}
+	hr{
+		border-width: 1px;
+	}
 	.flex-box{
 		display: none;
+		margin-top: 0;
 	}
 	.nav-photo{
 		display: none;
@@ -668,20 +688,16 @@ footer{
 	.slider-inner{
 		height: 300px;
 	}
-	h3, .h-3, .h-4, .h-5{
-		font-size: 40px;
-		line-height: 40px;
-		width: auto;
-	}
+	
 	.nav-container{
 		padding: 20px 10px;
 	}
 	.logo{
-		margin-top: -20px;
+		margin-top: -40px;
 		width: 200px;
 	}
 	h1{
-		margin-top: -60px;
+		margin-top: -80px;
 	}
 	.note{
 		width: 100%;
@@ -711,7 +727,8 @@ footer{
 		padding: 20px 5px;
 	}
 	.nav-number{
-		width: 20px;
+		max-width: 20px;
+		min-width: 20px;
 		font-size: 20px;
 	}
 	.nav-container a{
