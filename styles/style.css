@@ -403,22 +403,23 @@ article li::marker{
 
 footer{
 	background-color: #424530;
-	height: 65px;
 	color: #fff;
 }
 
 .in-footer{
+	padding: 15px;
 	margin: auto;
-	height: 65px;
 	max-width: 1700px;
 	display: flex;
 	justify-content: space-between;
+	align-items: end;
 }
 
-.in-footer p{
-	height: 100%;
+.in-footer p, .in-footer a{
+	font-family: "Noto Serif HK", serif;
+	color: #fff;
 	display: block;
-	line-height: 65px;
+	line-height: 35px;
 	font-size: 15px;
 	margin: 0;
 }
@@ -703,6 +704,9 @@ footer{
 	.p-12{
 		bottom: -50px;
 	}
+	.p-13, .p-9, .p-11{
+		right: 0;
+	}
 }
 
 @media (max-width: 1100px){
@@ -820,8 +824,9 @@ footer{
 	.slider-inner{
 		height: 500px;
 	}
-	.in-footer p{
+	.in-footer p, .in-footer a{
 		font-size: 10px;
+		line-height: 25px;
 	}
 	.in-footer{
 		padding: 0 10px;
@@ -841,6 +846,9 @@ footer{
 	}
 	.p-2{
 		display: none;
+	}
+	.p-7{
+		right: 0;
 	}
 }
 
