@@ -440,12 +440,12 @@ footer{
 	min-width: 550px; left: calc(50% - 575px); transform: translateX(0);
 }
 
-.element-animation{
-  opacity: 0;
+.animation{
+	opacity: 0;
   transform: translateY(20px);
 }
 
-.element-animation.element-show {
+.animation.element-show {
   opacity: 1;
   transition: all 1s;
   transform: translateY(0%);
