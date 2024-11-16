@@ -1,3 +1,4 @@
+import Line from "../Line/Line";
 import styles from "./Author.module.css";
 
 interface IAuthorProps {
@@ -10,7 +11,7 @@ export default function Author({ link, author }: IAuthorProps) {
     <div className={styles.author}>
       <img className={styles.photo} src={link} alt={author}></img>
       <p className={styles.description}>{author}</p>
-      <hr className={styles.dot} />
+      <Line dot="dot" />
     </div>
   );
 }

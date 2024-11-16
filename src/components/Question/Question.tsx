@@ -1,18 +1,40 @@
+import { useState } from "react";
 import Line from "../Line/Line";
 import styles from "./Question.module.css";
+import { motion } from "framer-motion";
 
 interface IQuestionProps {
   title: string;
   text: string;
 }
 
+const variants = {
+  open: { height: 180, opacity: 1 },
+  closed: { height: 70, opacity: 1 },
+};
+
 export default function Question({ title, text }: IQuestionProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <div className={styles.question}>
-        <button className={styles.button}>{title}</button>
+      <motion.div
+        initial={false}
+        transition={{
+          duration: 0.1,
+        }}
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
+        className={styles.question}
+      >
+        <button
+          className={styles.button}
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          {title}
+        </button>
         <svg
-          className={styles.arrow}
+          className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ""}`}
           width="24"
           height="22"
           viewBox="0 0 24 22"
@@ -24,8 +46,8 @@ export default function Question({ title, text }: IQuestionProps) {
             fill="#424530"
           />
         </svg>
-        <p>{text}</p>
-      </div>
+        <p className={styles.text}>{text}</p>
+      </motion.div>
       <Line dot="dot" />
     </>
   );

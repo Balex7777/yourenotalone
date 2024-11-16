@@ -1,13 +1,8 @@
 .question {
   position: relative;
-  margin: 20px 0 0;
+  margin: 0;
   transition: 0.5s;
   overflow: hidden;
-}
-.question p {
-  transition: 0.5s;
-  margin: 0;
-  height: 0;
 }
 
 .button {
@@ -16,27 +11,25 @@
   border: none;
   text-transform: uppercase;
   font-size: 24px;
-  height: 60px;
+  height: 70px;
   width: 100%;
   text-align: left;
   padding: 0;
   color: #000;
 }
 
-.question.active p {
-  transition: 0.5s;
-  margin: 15px 0 20px;
-  height: 100px;
+.text {
+  margin: 0 0 20px 0;
 }
 
 .arrow {
   transition: 0.5s;
   position: absolute;
-  top: 17px;
+  top: 25px;
   right: 0;
   z-index: -1;
 }
 
-.question.active .arrow {
+.arrowOpen {
   transform: rotate(180deg);
 }
