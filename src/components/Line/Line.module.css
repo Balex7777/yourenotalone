@@ -1,0 +1,13 @@
+.hr {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 1px;
+  border-color: #424530;
+  margin: 0;
+  width: 100%;
+}
+
+.dot {
+  border-style: dashed;
+  border-width: 1px;
+}

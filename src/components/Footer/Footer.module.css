@@ -1,0 +1,23 @@
+.footer {
+  background-color: #424530;
+  color: #fff;
+}
+
+.inner {
+  padding: 15px;
+  margin: auto;
+  max-width: 1700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.text,
+.link {
+  font-family: "Noto Serif HK", serif;
+  color: #fff;
+  display: block;
+  line-height: 35px;
+  font-size: 15px;
+  margin: 0;
+}

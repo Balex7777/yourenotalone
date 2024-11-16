@@ -1,0 +1,41 @@
+.title {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  z-index: 10;
+  font-family: "Noto Serif HK", serif;
+  text-transform: uppercase;
+  line-height: 50px;
+  width: 760px;
+}
+
+.flexBox {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: -50px 0 50px;
+}
+
+.hiddenHr {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  min-width: 550px;
+  background-color: #f4eee4;
+  z-index: 9;
+  min-width: 770px;
+}
+
+.inner {
+  position: relative;
+  max-width: 1250px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.space {
+  height: 40px;
+}

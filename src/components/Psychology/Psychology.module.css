@@ -1,0 +1,52 @@
+.title {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  z-index: 10;
+  font-family: "Noto Serif HK", serif;
+  text-transform: uppercase;
+  line-height: 50px;
+  width: 570px;
+  margin-right: calc(50% - 495px);
+}
+
+.flexBox {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: -45px 0 50px;
+}
+
+.hiddenHr {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  min-width: 550px;
+  background-color: #f4eee4;
+  z-index: 9;
+}
+
+.inner {
+  position: relative;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.psychologyB {
+  min-width: 550px;
+  left: auto;
+  right: calc(50% - 485px);
+  transform: translateX(0);
+}
+
+.psychology {
+  display: grid;
+  grid-template-columns: 1fr 790px;
+}
+
+.photo {
+  margin: auto;
+}
