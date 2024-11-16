@@ -28,60 +28,6 @@ h3 {
   line-height: 80px;
 }
 
-.slider {
-  width: 900px;
-  margin: 100px auto 50px;
-  display: grid;
-  grid-template-columns: 100px 700px 100px;
-}
-
-.slider button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.slider-inner {
-  position: relative;
-  height: 700px;
-  /* background-color: #424530; */
-  overflow: hidden;
-}
-
-.slider-line {
-  transition: 0.5s;
-  left: 0px;
-  display: flex;
-  position: absolute;
-  height: 700px;
-}
-
-.slide {
-  height: 700px;
-  width: 700px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.sl-1 {
-  background-image: url(img/download_image_1714643894809.png);
-}
-.sl-2 {
-  background-image: url(img/download_image_1714643122790.png);
-}
-
-.sl-3 {
-  background-image: url(img/photo_2024-04-03_21-25-34.jpg);
-}
-.sl-4 {
-  background-image: url(img/download_image_1714644000945.png);
-}
-
-.sl-5 {
-  background-image: url(img/photo_2024-04-03_21-25-41.jpg);
-}
-
 .article-img-1 {
   margin-top: 105px;
   display: block;

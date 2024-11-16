@@ -1,0 +1,18 @@
+.slider {
+  width: 850px;
+  margin: auto;
+}
+
+.slide {
+  height: 700px;
+  width: 700px;
+  object-fit: contain;
+}
+
+.customDots li button {
+  background-color: #424530 !important; /* Индикаторы */
+}
+
+.customDots li.slick-active button {
+  background-color: #424530 !important; /* Активный индикатор */
+}
