@@ -1,10 +1,17 @@
-import Line from "../Line/Line";
+import { motion } from "framer-motion";
+import { Line } from "../Line/Line";
 import Pin from "../Pin/Pin";
 import styles from "./Psychology.module.css";
+import { leftToRight, rightToLeft } from "../../scripts/animations";
 
 export default function Psychology() {
   return (
-    <section id="psychology">
+    <motion.section
+      initial="hidden"
+      whileInView="visiable"
+      viewport={{ amount: 0.3, once: true }}
+      id="psychology"
+    >
       <h2 className={styles.title}>ЧТО ТАКОЕ ПСИХОЛОГИЯ И ЧТО ОНА ИЗУЧАЕТ</h2>
       <div className={styles.flexBox}>
         <Line dot={""} />
@@ -18,31 +25,33 @@ export default function Psychology() {
         />
 
         <div className={styles.psychology}>
-          <img
+          <motion.img
+            custom={1}
+            variants={leftToRight}
             src="src/img/Rectangle17.png"
             alt="psychology"
             className={styles.photo}
-          ></img>
+          ></motion.img>
           <div>
-            <p>
+            <motion.p custom={1} variants={rightToLeft}>
               <b>Психология</b> — это наука, которая изучает психику человека на
               основе взаимодействия людей с окружающей средой.{" "}
-            </p>
-            <p>
+            </motion.p>
+            <motion.p custom={2} variants={rightToLeft}>
               В поле внимания психологии попадают межличностные отношения,
               реакции на те или иные события в жизни индивида или группы людей,
               последствия взаимодействия с объектами окружающей среды и т.д.
               Говоря простыми словами, психология изучает все, что заставляет
               человека мыслить и испытывать эмоции.
-            </p>
-            <p>
+            </motion.p>
+            <motion.p custom={3} variants={rightToLeft}>
               В настоящее время психология — многоотраслевая наука, которая
               включает в себя общие фундаментальные и прикладные направления.
               Это означает, что психология строится на общих принципах и
               понятиях, но внутри каждого направления есть свои особенности,
               требующие дополнительного изучения.
-            </p>
-            <p>
+            </motion.p>
+            <motion.p custom={4} variants={rightToLeft}>
               Объектом психологии выступает сам человек во всем разнообразии его
               взаимодействий с внешней средой. Сам по себе человек является
               объектом изучения других наук, например, анатомии. Однако объект
@@ -51,10 +60,10 @@ export default function Psychology() {
               Взаимоотношения людей в группах, поведение, деятельность — это все
               можно отнести к психическим явлениям и, соответственно, к объекту
               изучения психологии.
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

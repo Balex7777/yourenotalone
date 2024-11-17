@@ -18,7 +18,7 @@ export default function Footer() {
             SaimakovaAS824@mgpu.ru
           </a>{" "}
         </div>
-        <p>© МГПУ, 2024. ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
+        <p style={{ margin: 0 }}>© МГПУ, 2024. ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
       </div>
     </footer>
   );

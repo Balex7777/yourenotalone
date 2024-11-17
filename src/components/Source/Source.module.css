@@ -56,5 +56,5 @@
 }
 
 .hr:nth-of-type(6n) {
-  opacity: 0;
+  border-top: 0px solid #424530;
 }

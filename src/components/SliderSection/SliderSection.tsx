@@ -1,4 +1,4 @@
-import Line from "../Line/Line";
+import { Line } from "../Line/Line";
 import Slider from "../Slider/Slider";
 import styles from "./SliderSection.module.css";
 

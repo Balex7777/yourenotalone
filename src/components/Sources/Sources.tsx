@@ -1,7 +1,7 @@
 import Source from "../Source/Source";
 import styles from "./Sources.module.css";
 import { sources } from "../../data/sources";
-import Line from "../Line/Line";
+import { Line } from "../Line/Line";
 
 export default function Sources() {
   return (

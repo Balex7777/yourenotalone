@@ -1,10 +1,16 @@
-import Line from "../Line/Line";
+import { motion } from "framer-motion";
+import { Line } from "../Line/Line";
 import Pin from "../Pin/Pin";
 import styles from "./Navigation.module.css";
+import { leftToRight } from "../../scripts/animations";
 
 export default function Navigation() {
   return (
-    <section>
+    <motion.section
+      initial="hidden"
+      whileInView="visiable"
+      viewport={{ amount: 0.4, once: true }}
+    >
       <h1 className={styles.title}>НАВИГАТОР ПСИХОЛОГИЧЕСКОЙ ПОМОЩИ МОСКВЫ</h1>
       <div className={styles.flexBox} style={{ marginTop: -32 }}>
         <Line dot={""} />
@@ -35,14 +41,14 @@ export default function Navigation() {
             ></div>
           </div>
           <nav>
-            <li>
+            <motion.li custom={1} variants={leftToRight}>
               <p className={styles.counter}>01</p>
               <hr className={styles.navHr} />
               <a href="#about-us" title="О нас">
                 О нас
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li custom={2} variants={leftToRight}>
               <p className={styles.counter}>02</p>
               <hr className={styles.navHr} />
               <a
@@ -51,8 +57,8 @@ export default function Navigation() {
               >
                 Что такое психология и что она изучает
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li custom={3} variants={leftToRight}>
               <p className={styles.counter}>03</p>
               <hr className={styles.navHr} />
               <a
@@ -61,18 +67,18 @@ export default function Navigation() {
               >
                 С какими вопросами можно обратиться к психологу
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li custom={4} variants={leftToRight}>
               <p className={styles.counter}>04</p>
               <hr className={styles.navHr} />
               <a href="#source" title="Источники психологической помощи">
                 Источники психологической помощи
               </a>
-            </li>
+            </motion.li>
           </nav>
         </div>
         <img src="src/img/image4.png" className={styles.photo} alt="cat"></img>
       </div>
-    </section>
+    </motion.section>
   );
 }

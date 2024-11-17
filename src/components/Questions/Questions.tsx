@@ -1,11 +1,18 @@
 import styles from "./Questions.module.css";
-import Question from "../Question/Question";
+import { MQuestion } from "../Question/Question";
 import Pin from "../Pin/Pin";
-import Line from "../Line/Line";
+import { Line } from "../Line/Line";
+import { motion } from "framer-motion";
+import { leftToRight, rightToLeft } from "../../scripts/animations";
 
 export default function Questions() {
   return (
-    <section id="questions">
+    <motion.section
+      initial="hidden"
+      whileInView="visiable"
+      viewport={{ amount: 0.3, once: true }}
+      id="questions"
+    >
       <h2 className={styles.title}>
         С КАКИМИ ВОПРОСАМИ МОЖНО ОБРАТИТЬСЯ К ПСИХОЛОГУ
       </h2>
@@ -15,41 +22,55 @@ export default function Questions() {
       </div>
       <div className={styles.inner}>
         <Pin link="src/img/pins/image-no-bg-preview10.png" alt="cat" num={6} />
-        <p>
+        <motion.p custom={1} variants={leftToRight}>
           Обращение к психологу является важным и целесообразным шагом для
           поддержания психического здоровья и благополучия. Психологическое
           консультирование и терапия играют существенную роль в решении широкого
           спектра психологических проблем и эмоциональных трудностей.
-        </p>
+        </motion.p>
         <div className={styles.questions}>
           <div>
-            <Question
+            <MQuestion
+              custom={2}
+              variants={leftToRight}
               title="ЭМОЦИОНАЛЬНОЕ БЛАГОПОЛУЧИЕ"
               text="Работа над эмоциональным состоянием, управление стрессом,
                 тревогой, депрессией, повышение самооценки и самосознания."
             />
-            <Question
+            <MQuestion
+              custom={3}
+              variants={leftToRight}
               title="Межличностные отношения"
               text="Улучшение коммуникации, разрешение конфликтов, укрепление
                 отношений, работа над социальными навыками, управление гневом и
                 агрессией."
             />
-            <Question
+            <MQuestion
+              custom={4}
+              variants={leftToRight}
               title="Саморазвитие"
               text="Работа над личным ростом, самоопределением, достижением целей,
                 улучшение мотивации, развитие навыков принятия решений."
             />
-            <Question
+            <MQuestion
+              custom={5}
+              variants={leftToRight}
               title="Семейные вопросы"
               text="Работа над отношениями в семье, совместное воспитание детей,
                 предотвращение развода, проблемы родительства, детские травмы."
             />
-            <Question
+            <MQuestion
+              custom={6}
+              variants={leftToRight}
               title="Здоровый образ жизни"
               text="Помощь в установлении здоровых привычек, управление весом,
                 улучшение физического и психического благополучия."
             />
-            <div className={styles.note}>
+            <motion.div
+              className={styles.note}
+              custom={7}
+              variants={leftToRight}
+            >
               <span className={styles.exclamationMark}>!</span>
               <p className={styles.noteText}>
                 Психолог — не врач, поэтому не ставит диагнозы, он смотрит на
@@ -61,11 +82,16 @@ export default function Questions() {
                 alt="bow"
                 num={7}
               />
-            </div>
+            </motion.div>
           </div>
-          <img src="src/img/Rectangle18.png" className={styles.photo}></img>
+          <motion.img
+            custom={2}
+            variants={rightToLeft}
+            src="src/img/Rectangle18.png"
+            className={styles.photo}
+          ></motion.img>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

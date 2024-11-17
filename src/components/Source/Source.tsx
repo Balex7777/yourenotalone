@@ -1,7 +1,9 @@
+import { motion } from "framer-motion";
 import { source } from "../../data/sources";
-import Line from "../Line/Line";
-import Mark from "../Mark/Mark";
+import { MLine } from "../Line/Line";
+import { MMark } from "../Mark/Mark";
 import styles from "./Source.module.css";
+import { downToUp, leftToRight, rightToLeft } from "../../scripts/animations";
 
 interface ISourceProps {
   source: source;
@@ -9,10 +11,16 @@ interface ISourceProps {
 
 export default function Source({ source }: ISourceProps) {
   return (
-    <>
+    <motion.div
+      initial="hidden"
+      whileInView="visiable"
+      viewport={{ amount: 0.6, once: true }}
+    >
       <article className={styles.article}>
         <div className={styles.half}>
-          <h3
+          <motion.h3
+            custom={1}
+            variants={leftToRight}
             style={{
               fontSize: source.fontSize,
               lineHeight: source.fontHeight + "px",
@@ -21,10 +29,14 @@ export default function Source({ source }: ISourceProps) {
             }}
           >
             {source.title}
-          </h3>
-          <Line dot="dot" />
+          </motion.h3>
+          <MLine custom={1} variants={leftToRight} dot="dot" />
           {source.info && (
-            <div className={styles.info}>
+            <motion.div
+              custom={2}
+              variants={leftToRight}
+              className={styles.info}
+            >
               <svg
                 className={styles.infoIcon}
                 width="27"
@@ -50,27 +62,65 @@ export default function Source({ source }: ISourceProps) {
                 />
               </svg>
               <p className={styles.infoText}>{source.info}</p>
-            </div>
+            </motion.div>
           )}
-          <span className={styles.bold}>Кто создал:</span>
-          <p className={styles.text}>{source.creator}</p>
-          <span className={styles.bold}>Кто может обратиться:</span>
-          <p className={styles.text}>{source.target}</p>
-          <a href={source.link} target="_blank" className={styles.link}>
+          <motion.span
+            custom={2}
+            variants={leftToRight}
+            className={styles.bold}
+          >
+            Кто создал:
+          </motion.span>
+          <motion.p custom={2} variants={leftToRight} className={styles.text}>
+            {source.creator}
+          </motion.p>
+          <motion.span
+            custom={3}
+            variants={leftToRight}
+            className={styles.bold}
+          >
+            Кто может обратиться:
+          </motion.span>
+          <motion.p custom={3} variants={leftToRight} className={styles.text}>
+            {source.target}
+          </motion.p>
+          <motion.a
+            custom={4}
+            variants={leftToRight}
+            href={source.link}
+            target="_blank"
+            className={styles.link}
+          >
             перейти на сайт
-          </a>
+          </motion.a>
         </div>
         <div className={styles.half}>
           {source.pluses.map((plus, i) => (
-            <Mark mark={plus} type="plus" key={i} />
+            <MMark
+              custom={i + 1}
+              variants={rightToLeft}
+              mark={plus}
+              type="plus"
+              key={i}
+            />
           ))}
           <div className={styles.space}></div>
           {source.minuses.map((minus, i) => (
-            <Mark mark={minus} type="minus" key={i} />
+            <MMark
+              custom={i + source.pluses.length + 1}
+              variants={rightToLeft}
+              mark={minus}
+              type="minus"
+              key={i}
+            />
           ))}
         </div>
       </article>
-      <hr className={styles.hr} />
-    </>
+      <motion.hr
+        className={styles.hr}
+        custom={source.minuses.length + source.pluses.length + 1}
+        variants={downToUp}
+      />
+    </motion.div>
   );
 }
