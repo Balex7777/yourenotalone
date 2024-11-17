@@ -7,7 +7,7 @@ import photo1 from "../../assets/pins/download_image_1716228878524-no-bg-preview
 import photo2 from "../../assets/Rectangle17.png";
 
 export default function Psychology() {
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 768 || window.innerHeight <= 600;
 
   return (
     <motion.section

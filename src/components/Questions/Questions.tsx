@@ -9,7 +9,7 @@ import photo2 from "../../assets/pins/download_image_1714635988610-transformed.p
 import photo3 from "../../assets/Rectangle18.png";
 
 export default function Questions() {
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 768 || window.innerHeight <= 600;
 
   return (
     <motion.section

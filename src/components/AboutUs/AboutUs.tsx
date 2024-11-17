@@ -11,7 +11,7 @@ import photo4 from "../../assets/photo_2024-05-17_12-39-35.jpg";
 import photo5 from "../../assets/photo_2024-05-19_00-11-52.jpg";
 
 export default function AboutUs() {
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 768 || window.innerHeight <= 600;
 
   return (
     <motion.section

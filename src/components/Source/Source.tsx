@@ -12,7 +12,7 @@ interface ISourceProps {
 }
 
 export default function Source({ source, index }: ISourceProps) {
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 768 || window.innerHeight <= 600;
   return (
     <motion.div
       initial="hidden"
