@@ -3,6 +3,8 @@ import { Line } from "../Line/Line";
 import { Pin } from "../Pin/Pin";
 import styles from "./Psychology.module.css";
 import { leftToRight, rightToLeft } from "../../scripts/animations";
+import photo1 from "../../assets/pins/download_image_1716228878524-no-bg-preview.png";
+import photo2 from "../../assets/Rectangle17.png";
 
 export default function Psychology() {
   const isMobile = window.innerWidth <= 768;
@@ -19,17 +21,13 @@ export default function Psychology() {
         <Line dot={""} />
       </div>
       <div className={styles.inner}>
-        <Pin
-          link="src/img/pins/download_image_1716228878524-no-bg-preview.png"
-          num={5}
-          alt="lamp"
-        />
+        <Pin link={photo1} num={5} alt="lamp" />
 
         <div className={styles.psychology}>
           <motion.img
             custom={1}
             variants={leftToRight}
-            src="src/img/Rectangle17.png"
+            src={photo2}
             alt="psychology"
             className={styles.photo}
           ></motion.img>

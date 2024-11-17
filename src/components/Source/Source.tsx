@@ -99,7 +99,7 @@ export default function Source({ source, index }: ISourceProps) {
           <MPin
             custom={5}
             variants={leftToRight}
-            link={`src/${source.img}`}
+            link={source.img}
             num={8}
             alt="plant"
           />

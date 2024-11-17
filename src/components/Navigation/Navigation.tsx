@@ -3,6 +3,9 @@ import { Line } from "../Line/Line";
 import { Pin } from "../Pin/Pin";
 import styles from "./Navigation.module.css";
 import { leftToRight } from "../../scripts/animations";
+import photo1 from "../../assets/pins/download_image_1716228728646-no-bg-preview.png";
+import photo2 from "../../assets/pins/download_image_1716228835730-no-bg-preview.png";
+import photo3 from "../../assets/image4.png";
 
 export default function Navigation() {
   return (
@@ -16,16 +19,8 @@ export default function Navigation() {
         <Line dot={""} />
       </div>
       <div className={styles.inner}>
-        <Pin
-          link="src/img/pins/download_image_1716228728646-no-bg-preview.png"
-          num={1}
-          alt="lamp"
-        />
-        <Pin
-          link="src/img/pins/download_image_1716228835730-no-bg-preview.png"
-          num={2}
-          alt="plant in basket"
-        />
+        <Pin link={photo1} num={1} alt="lamp" />
+        <Pin link={photo2} num={2} alt="plant in basket" />
 
         <div className={styles.navigationBg}>
           <h2 className={styles.content}>СОДЕРЖАНИЕ</h2>
@@ -69,7 +64,7 @@ export default function Navigation() {
             </motion.li>
           </nav>
         </div>
-        <img src="src/img/image4.png" className={styles.photo} alt="cat"></img>
+        <img src={photo3} className={styles.photo} alt="cat"></img>
       </div>
     </motion.section>
   );

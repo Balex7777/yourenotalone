@@ -4,6 +4,9 @@ import { Pin } from "../Pin/Pin";
 import { Line } from "../Line/Line";
 import { motion } from "framer-motion";
 import { leftToRight, rightToLeft } from "../../scripts/animations";
+import photo1 from "../../assets/pins/image-no-bg-preview10.png";
+import photo2 from "../../assets/pins/download_image_1714635988610-transformed.png";
+import photo3 from "../../assets/Rectangle18.png";
 
 export default function Questions() {
   const isMobile = window.innerWidth <= 768;
@@ -22,7 +25,7 @@ export default function Questions() {
         <Line dot="" />
       </div>
       <div className={styles.inner}>
-        <Pin link="src/img/pins/image-no-bg-preview10.png" alt="cat" num={6} />
+        <Pin link={photo1} alt="cat" num={6} />
         <motion.p custom={1} variants={leftToRight}>
           Обращение к психологу является важным и целесообразным шагом для
           поддержания психического здоровья и благополучия. Психологическое
@@ -78,17 +81,13 @@ export default function Questions() {
                 проблему со стороны и замечает нюансы, которые давно не видит
                 сам человек, пребывая внутри конфликтной ситуации или проблемы.
               </p>
-              <Pin
-                link="src/img/pins/download_image_1714635988610-transformed.png"
-                alt="bow"
-                num={7}
-              />
+              <Pin link={photo2} alt="bow" num={7} />
             </motion.div>
           </div>
           <motion.img
             custom={2}
             variants={rightToLeft}
-            src="src/img/Rectangle18.png"
+            src={photo3}
             className={styles.photo}
           ></motion.img>
         </div>

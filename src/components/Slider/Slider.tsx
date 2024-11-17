@@ -1,5 +1,10 @@
 import { Carousel, ConfigProvider } from "antd";
 import styles from "./Slider.module.css";
+import slide1 from "../../assets/download_image_1714643894809.png";
+import slide2 from "../../assets/download_image_1714643122790.png";
+import slide3 from "../../assets/photo_2024-04-03_21-25-34.jpg";
+import slide4 from "../../assets/download_image_1714644000945.png";
+import slide5 from "../../assets/photo_2024-04-03_21-25-41.jpg";
 
 export default function Slider() {
   return (
@@ -50,31 +55,11 @@ export default function Slider() {
           </svg>
         }
       >
-        <img
-          src="src/img/download_image_1714643894809.png"
-          alt="slide1"
-          className={styles.slide}
-        ></img>
-        <img
-          src="src/img/download_image_1714643122790.png"
-          alt="slide2"
-          className={styles.slide}
-        ></img>
-        <img
-          src="src/img/photo_2024-04-03_21-25-34.jpg"
-          alt="slide3"
-          className={styles.slide}
-        ></img>
-        <img
-          src="src/img/download_image_1714644000945.png"
-          alt="slide4"
-          className={styles.slide}
-        ></img>
-        <img
-          src="src/img/photo_2024-04-03_21-25-41.jpg"
-          alt="slide5"
-          className={styles.slide}
-        ></img>
+        <img src={slide1} alt="slide1" className={styles.slide}></img>
+        <img src={slide2} alt="slide2" className={styles.slide}></img>
+        <img src={slide3} alt="slide3" className={styles.slide}></img>
+        <img src={slide4} alt="slide4" className={styles.slide}></img>
+        <img src={slide5} alt="slide5" className={styles.slide}></img>
       </Carousel>
     </ConfigProvider>
   );

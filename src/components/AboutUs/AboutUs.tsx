@@ -4,6 +4,11 @@ import { Line } from "../Line/Line";
 import { Pin } from "../Pin/Pin";
 import styles from "./AboutUs.module.css";
 import { downToUp, leftToRight } from "../../scripts/animations";
+import photo1 from "../../assets/pins/download_image_1716228810755-no-bg-preview.png";
+import photo2 from "../../assets/pins/image-no-bg-preview5.png";
+import photo3 from "../../assets/photo_2024-05-19_20-43-08.jpg";
+import photo4 from "../../assets/photo_2024-05-17_12-39-35.jpg";
+import photo5 from "../../assets/photo_2024-05-19_00-11-52.jpg";
 
 export default function AboutUs() {
   const isMobile = window.innerWidth <= 768;
@@ -21,16 +26,8 @@ export default function AboutUs() {
         <Line dot={""} />
       </div>
       <div className={styles.inner}>
-        <Pin
-          link="src/img/pins/download_image_1716228810755-no-bg-preview.png"
-          num={3}
-          alt="plant"
-        />
-        <Pin
-          link="src/img/pins/image-no-bg-preview5.png"
-          num={4}
-          alt="dragonfly"
-        />
+        <Pin link={photo1} num={3} alt="plant" />
+        <Pin link={photo2} num={4} alt="dragonfly" />
         <motion.p custom={1} variants={leftToRight}>
           В современном мире сфера психологической помощи переживает
           существенные изменения и трансформации, в частности за счет развития
@@ -56,19 +53,19 @@ export default function AboutUs() {
           <MAuthor
             custom={4}
             variants={downToUp}
-            link="src/img/photo_2024-05-19_20-43-08.jpg"
+            link={photo3}
             author="Комлева Виктория Андреевна, студентка 1-го курса МГПУ"
           />
           <MAuthor
             custom={5}
             variants={downToUp}
-            link="src/img/photo_2024-05-17_12-39-35.jpg"
+            link={photo4}
             author="Янкова Екатерина Сергеевна, студентка 1-го курса МГПУ"
           />
           <MAuthor
             custom={6}
             variants={downToUp}
-            link="src/img/photo_2024-05-19_00-11-52.jpg"
+            link={photo5}
             author="Саймакова Алёна Сергеевна, студентка 1-го курса МГПУ"
           />
         </div>

@@ -1,3 +1,11 @@
+import pin1 from "../assets/pins/07e12b3d2eb799a155437cb8779d4406-transformed.png";
+import pin2 from "../assets/pins/69af73df02d8c14b07673af1832d81c5-transformed.png";
+import pin3 from "../assets/pins/74acd3335b013c5bc358827ea9a32e8c.png";
+import pin4 from "../assets/pins/image-no-bg-preview8.png";
+import pin5 from "../assets/pins/image-no-bg-preview9.png";
+import pin6 from "../assets/pins/image-no-bg-preview11.png";
+// import fff from "../assets/pins/07e12b3d2eb799a155437cb8779d4406-transformed.png"
+
 export interface sourceMark {
   text: string;
   list?: Array<{
@@ -27,7 +35,7 @@ export const sources = [
       "организация «Врачи детям», которая занимается поддержкой семей и защищает права детей.",
     target: "дети и подростки до 18 лет.",
     link: "https://pomoschryadom.ru/",
-    img: "img/pins/07e12b3d2eb799a155437cb8779d4406-transformed.png",
+    img: pin1,
     pluses: [
       {
         text: "Анонимность. Если человек не хочет, то может не раскрывать свое настоящее имя.",
@@ -60,7 +68,7 @@ export const sources = [
     creator: "Институт практической психологии и психоанализа.",
     target: "все желающие.",
     link: "https://yaroslavna.help/",
-    img: "img/pins/69af73df02d8c14b07673af1832d81c5-transformed.png",
+    img: pin2,
     pluses: [
       {
         text: "После разговора предложат записаться на три бесплатные личные консультации.",
@@ -85,7 +93,7 @@ export const sources = [
     creator: "Фонд поддержки детей, находящихся в трудной жизненной ситуации.",
     target: "родители детей и подростков.",
     link: "https://www.ya-roditel.ru/parents/consultation/",
-    img: "img/pins/74acd3335b013c5bc358827ea9a32e8c.png",
+    img: pin3,
     pluses: [
       {
         text: "Консультации проводятся бесплатно.",
@@ -133,7 +141,7 @@ export const sources = [
     creator: "Благотворительный проект",
     target: "Родители детей и подростков.",
     link: "http://pomogaya-drugim.ru/",
-    img: "img/pins/image-no-bg-preview8.png",
+    img: pin4,
     pluses: [
       {
         text: "Помощь можно получить в формате переписки на форуме или по Skype.",
@@ -163,7 +171,7 @@ export const sources = [
       "Факультет социальных наук НИУ ВШЭ. В этом проекте помощь оказывают студенты и выпускники магистерской программы «Психоанализ и психоаналитическая психотерапия» Высшей школы экономики.",
     target: "Взрослые старше 18 лет.",
     link: "https://www.hse.ru/ma/therapy/news/352754028.html",
-    img: "img/pins/image-no-bg-preview9.png",
+    img: pin5,
     pluses: [
       {
         text: "В рамках Центра предложены 3 бесплатные консультации по 50 минут каждая, 1 раз в неделю. В ближайшее время Центр работает только в формате онлайн, это означает, что сессии с психологом будут проводиться в любом удобном Вам дистанционном формате видеосвязи (Skype, Zoom, WhatsApp, Viber и т.п.).",
@@ -193,7 +201,7 @@ export const sources = [
     creator: "Выпускники факультета психологии МГУ.",
     target: "Все желающие.",
     link: "https://psysovet.ru/",
-    img: "img/pins/image-no-bg-preview11.png",
+    img: pin6,
     pluses: [
       {
         text: "Сервис с специализируется на подборе психологов, способных помочь именно в вашей ситуации",
