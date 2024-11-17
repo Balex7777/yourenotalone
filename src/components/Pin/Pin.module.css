@@ -1,7 +1,6 @@
 .pin {
   position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-position: center;
 }
 
 .p1 {
@@ -61,13 +60,12 @@
   object-fit: cover;
 }
 
-.p-8 {
-  width: 280px;
-  height: 280px;
-  bottom: 20px;
+.p8 {
+  width: 250px;
+  height: 250px;
+  bottom: 10px;
   right: 0px;
-  background-size: cover;
-  background-image: url(img/pins/07e12b3d2eb799a155437cb8779d4406-transformed.png);
+  object-fit: cover;
 }
 
 .p-9 {

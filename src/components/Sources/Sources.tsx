@@ -13,7 +13,7 @@ export default function Sources() {
       </div>
       <div className={styles.inner}>
         {sources.map((source, i) => (
-          <Source source={source} key={i} />
+          <Source source={source} key={i} index={i} />
         ))}
       </div>
     </section>

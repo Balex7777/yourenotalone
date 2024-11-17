@@ -4,12 +4,14 @@ import { MLine } from "../Line/Line";
 import { MMark } from "../Mark/Mark";
 import styles from "./Source.module.css";
 import { downToUp, leftToRight, rightToLeft } from "../../scripts/animations";
+import Pin from "../Pin/Pin";
 
 interface ISourceProps {
   source: source;
+  index: number;
 }
 
-export default function Source({ source }: ISourceProps) {
+export default function Source({ source, index }: ISourceProps) {
   return (
     <motion.div
       initial="hidden"
@@ -93,6 +95,7 @@ export default function Source({ source }: ISourceProps) {
           >
             перейти на сайт
           </motion.a>
+          <Pin link={`src/${source.img}`} num={8} alt="plant" />
         </div>
         <div className={styles.half}>
           {source.pluses.map((plus, i) => (
@@ -116,11 +119,15 @@ export default function Source({ source }: ISourceProps) {
           ))}
         </div>
       </article>
-      <motion.hr
-        className={styles.hr}
-        custom={source.minuses.length + source.pluses.length + 1}
-        variants={downToUp}
-      />
+      {index != 5 ? (
+        <motion.hr
+          className={styles.hr}
+          custom={source.minuses.length + source.pluses.length + 1}
+          variants={downToUp}
+        />
+      ) : (
+        <></>
+      )}
     </motion.div>
   );
 }

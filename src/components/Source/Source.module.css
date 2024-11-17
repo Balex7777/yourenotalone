@@ -23,12 +23,17 @@
 }
 
 .link {
+  transition: 0.3s;
   display: block;
   margin-top: 30px;
   font-size: 20px;
   color: #424530;
   font-weight: 900;
   text-decoration: underline;
+}
+
+.link:hover {
+  color: #424530cc;
 }
 
 .info {

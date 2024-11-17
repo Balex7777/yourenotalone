@@ -91,6 +91,7 @@ nav li {
 }
 
 nav li a {
+  transition: 0.3s;
   text-decoration: none;
   display: inline-block;
   color: black;
@@ -99,4 +100,8 @@ nav li a {
   font-weight: 500;
   font-family: "Noto Serif HK", serif;
   height: 40px;
+}
+
+nav li a:hover {
+  color: #424530ca;
 }
