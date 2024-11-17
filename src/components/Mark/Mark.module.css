@@ -17,3 +17,9 @@ li {
 li::marker {
   color: #424530;
 }
+
+@media (max-width: 600px) {
+  li {
+    font-size: 16px;
+  }
+}

@@ -43,3 +43,10 @@
   line-height: 50px;
   width: 560px;
 }
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 30px;
+    width: auto;
+  }
+}

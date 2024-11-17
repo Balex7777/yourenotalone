@@ -21,3 +21,9 @@
   font-size: 15px;
   margin: 0;
 }
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

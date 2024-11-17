@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Line } from "../Line/Line";
-import Pin from "../Pin/Pin";
+import { Pin } from "../Pin/Pin";
 import styles from "./Navigation.module.css";
 import { leftToRight } from "../../scripts/animations";
 
@@ -12,9 +12,8 @@ export default function Navigation() {
       viewport={{ amount: 0.4, once: true }}
     >
       <h1 className={styles.title}>НАВИГАТОР ПСИХОЛОГИЧЕСКОЙ ПОМОЩИ МОСКВЫ</h1>
-      <div className={styles.flexBox} style={{ marginTop: -32 }}>
+      <div style={{ marginTop: -60 }}>
         <Line dot={""} />
-        <div className={styles.hiddenHr}></div>
       </div>
       <div className={styles.inner}>
         <Pin
@@ -30,15 +29,8 @@ export default function Navigation() {
 
         <div className={styles.navigationBg}>
           <h2 className={styles.content}>СОДЕРЖАНИЕ</h2>
-          <div
-            className={styles.flexBox}
-            style={{ marginTop: -23, padding: "0 20px" }}
-          >
+          <div className={styles.flexBox}>
             <Line dot={""} />
-            <div
-              className={styles.hiddenHr}
-              style={{ minWidth: 270, backgroundColor: "white" }}
-            ></div>
           </div>
           <nav>
             <motion.li custom={1} variants={leftToRight}>

@@ -19,7 +19,7 @@
 }
 
 .text {
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 
 .arrow {
@@ -32,4 +32,12 @@
 
 .arrowOpen {
   transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  .button {
+    font-size: 18px;
+    font-weight: 600;
+    color: #424530;
+  }
 }

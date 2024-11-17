@@ -4,7 +4,7 @@ import { MLine } from "../Line/Line";
 import { MMark } from "../Mark/Mark";
 import styles from "./Source.module.css";
 import { downToUp, leftToRight, rightToLeft } from "../../scripts/animations";
-import Pin from "../Pin/Pin";
+import { MPin } from "../Pin/Pin";
 
 interface ISourceProps {
   source: source;
@@ -12,11 +12,12 @@ interface ISourceProps {
 }
 
 export default function Source({ source, index }: ISourceProps) {
+  const isMobile = window.innerWidth <= 768;
   return (
     <motion.div
       initial="hidden"
       whileInView="visiable"
-      viewport={{ amount: 0.6, once: true }}
+      viewport={{ amount: isMobile ? 0.1 : 0.5, once: true }}
     >
       <article className={styles.article}>
         <div className={styles.half}>
@@ -95,7 +96,13 @@ export default function Source({ source, index }: ISourceProps) {
           >
             перейти на сайт
           </motion.a>
-          <Pin link={`src/${source.img}`} num={8} alt="plant" />
+          <MPin
+            custom={5}
+            variants={leftToRight}
+            link={`src/${source.img}`}
+            num={8}
+            alt="plant"
+          />
         </div>
         <div className={styles.half}>
           {source.pluses.map((plus, i) => (

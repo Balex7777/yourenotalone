@@ -46,3 +46,13 @@ h3 {
   background-size: cover;
   background-image: url(img/download_image_1716229080799.png);
 }
+
+.slick-list {
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  p {
+    font-size: 16px;
+  }
+}

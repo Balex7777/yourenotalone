@@ -1,21 +1,22 @@
 import { motion } from "framer-motion";
 import { Line } from "../Line/Line";
-import Pin from "../Pin/Pin";
+import { Pin } from "../Pin/Pin";
 import styles from "./Psychology.module.css";
 import { leftToRight, rightToLeft } from "../../scripts/animations";
 
 export default function Psychology() {
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <motion.section
       initial="hidden"
       whileInView="visiable"
-      viewport={{ amount: 0.3, once: true }}
+      viewport={{ amount: isMobile ? 0.2 : 0.3, once: true }}
       id="psychology"
     >
       <h2 className={styles.title}>ЧТО ТАКОЕ ПСИХОЛОГИЯ И ЧТО ОНА ИЗУЧАЕТ</h2>
       <div className={styles.flexBox}>
         <Line dot={""} />
-        <div className={styles.hiddenHr + " " + styles.psychologyB}></div>
       </div>
       <div className={styles.inner}>
         <Pin

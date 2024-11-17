@@ -1,23 +1,24 @@
 import { motion } from "framer-motion";
 import { MAuthor } from "../Author/Author";
 import { Line } from "../Line/Line";
-import Pin from "../Pin/Pin";
+import { Pin } from "../Pin/Pin";
 import styles from "./AboutUs.module.css";
 import { downToUp, leftToRight } from "../../scripts/animations";
 
 export default function AboutUs() {
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <motion.section
       initial="hidden"
       whileInView="visiable"
-      viewport={{ amount: 0.4, once: true }}
+      viewport={{ amount: isMobile ? 0.1 : 0.4, once: true }}
       id="about-us"
       className={styles.aboutUs}
     >
       <h2 className={styles.title}>О НАС</h2>
       <div className={styles.flexBox} style={{ margin: "-22px 0 50px" }}>
         <Line dot={""} />
-        <div className={styles.hiddenHr} style={{ minWidth: 170 }}></div>
       </div>
       <div className={styles.inner}>
         <Pin

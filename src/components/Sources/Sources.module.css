@@ -39,3 +39,20 @@
 .space {
   height: 40px;
 }
+
+@media (max-width: 760px) {
+  .title {
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 30px;
+    width: auto;
+  }
+
+  .inner {
+    margin-top: 50px;
+  }
+}

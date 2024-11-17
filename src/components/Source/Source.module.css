@@ -63,3 +63,25 @@
 .hr:nth-of-type(6n) {
   border-top: 0px solid #424530;
 }
+
+@media (max-width: 1375px) {
+  .article {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  h3 {
+    font-size: 30px !important;
+    width: auto;
+    margin-bottom: 20px !important;
+    line-height: 30px !important;
+  }
+  .space {
+    height: 20px;
+  }
+  .bold,
+  .link {
+    font-size: 16px;
+  }
+}

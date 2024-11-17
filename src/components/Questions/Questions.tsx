@@ -1,24 +1,25 @@
 import styles from "./Questions.module.css";
 import { MQuestion } from "../Question/Question";
-import Pin from "../Pin/Pin";
+import { Pin } from "../Pin/Pin";
 import { Line } from "../Line/Line";
 import { motion } from "framer-motion";
 import { leftToRight, rightToLeft } from "../../scripts/animations";
 
 export default function Questions() {
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <motion.section
       initial="hidden"
       whileInView="visiable"
-      viewport={{ amount: 0.3, once: true }}
+      viewport={{ amount: isMobile ? 0.2 : 0.3, once: true }}
       id="questions"
     >
       <h2 className={styles.title}>
         С КАКИМИ ВОПРОСАМИ МОЖНО ОБРАТИТЬСЯ К ПСИХОЛОГУ
       </h2>
-      <div className={styles.flexBox} style={{}}>
+      <div className={styles.flexBox}>
         <Line dot="" />
-        <div className={styles.hiddenHr + " " + styles.questionsB}></div>
       </div>
       <div className={styles.inner}>
         <Pin link="src/img/pins/image-no-bg-preview10.png" alt="cat" num={6} />

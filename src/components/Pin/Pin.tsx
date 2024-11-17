@@ -1,4 +1,6 @@
+import { ForwardedRef, forwardRef } from "react";
 import styles from "./Pin.module.css";
+import { motion } from "framer-motion";
 
 interface IPinProps {
   link: string;
@@ -6,12 +8,17 @@ interface IPinProps {
   alt: string;
 }
 
-export default function Pin({ link, num, alt }: IPinProps) {
-  return (
-    <img
-      src={link}
-      className={`${styles.pin} ${styles[`p${num}`]}`}
-      alt={alt}
-    />
-  );
-}
+export const Pin = forwardRef(
+  ({ link, num, alt }: IPinProps, ref: ForwardedRef<HTMLImageElement>) => {
+    return (
+      <img
+        ref={ref}
+        src={link}
+        className={`${styles.pin} ${styles[`p${num}`]}`}
+        alt={alt}
+      />
+    );
+  }
+);
+
+export const MPin = motion(Pin);

@@ -4,7 +4,7 @@ const bounce = 0.4;
 
 export const downToUp = {
   hidden: {
-    y: 50,
+    y: 25,
     opacity: 0,
   },
   visiable: (custom: number) => ({
@@ -21,7 +21,7 @@ export const downToUp = {
 
 export const leftToRight = {
   hidden: {
-    x: -50,
+    x: -25,
     opacity: 0,
   },
   visiable: (custom: number) => ({
@@ -38,7 +38,7 @@ export const leftToRight = {
 
 export const rightToLeft = {
   hidden: {
-    x: 50,
+    x: 25,
     opacity: 0,
   },
   visiable: (custom: number) => ({

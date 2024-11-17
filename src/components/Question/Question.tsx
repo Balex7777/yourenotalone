@@ -9,8 +9,8 @@ interface IQuestionProps {
 }
 
 const variants = {
-  open: { height: 180, opacity: 1 },
-  closed: { height: 70, opacity: 1 },
+  open: { height: "auto", opacity: 1, margin: "0 0 20px 0" },
+  closed: { height: 0, opacity: 0, margin: 0 },
 };
 
 export const Question = forwardRef(
@@ -18,15 +18,7 @@ export const Question = forwardRef(
     const [isOpen, setIsOpen] = useState(false);
     return (
       <div ref={ref}>
-        <motion.div
-          initial={false}
-          transition={{
-            duration: 0.1,
-          }}
-          animate={isOpen ? "open" : "closed"}
-          variants={variants}
-          className={styles.question}
-        >
+        <div className={styles.question}>
           <button
             className={styles.button}
             onClick={() => setIsOpen((prev) => !prev)}
@@ -46,8 +38,18 @@ export const Question = forwardRef(
               fill="#424530"
             />
           </svg>
-          <p className={styles.text}>{text}</p>
-        </motion.div>
+          <motion.p
+            initial={false}
+            transition={{
+              duration: 0.5,
+            }}
+            animate={isOpen ? "open" : "closed"}
+            variants={variants}
+            className={styles.text}
+          >
+            {text}
+          </motion.p>
+        </div>
         <Line dot="dot" />
       </div>
     );

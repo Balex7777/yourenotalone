@@ -10,6 +10,7 @@
   line-height: 50px;
   width: 570px;
   margin-right: calc(50% - 495px);
+  background-color: #f4eee4;
 }
 
 .flexBox {
@@ -19,27 +20,10 @@
   margin: -45px 0 50px;
 }
 
-.hiddenHr {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 4px;
-  min-width: 550px;
-  background-color: #f4eee4;
-  z-index: 9;
-}
-
 .inner {
   position: relative;
   max-width: 1250px;
   margin: auto;
-}
-
-.psychologyB {
-  min-width: 550px;
-  left: auto;
-  right: calc(50% - 485px);
-  transform: translateX(0);
 }
 
 .psychology {
@@ -49,4 +33,30 @@
 
 .photo {
   margin: auto;
+}
+
+@media (max-width: 1375px) {
+  .photo {
+    display: none;
+  }
+  .psychology {
+    grid-template-columns: 1fr;
+  }
+  .inner {
+    padding: 25px;
+  }
+  .title {
+    position: relative;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 30px;
+    width: auto;
+  }
+  .inner {
+    padding: 0 25px;
+  }
 }

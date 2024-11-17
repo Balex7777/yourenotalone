@@ -1,4 +1,5 @@
 .main {
   max-width: 1700px;
   margin: auto;
+  overflow: hidden;
 }

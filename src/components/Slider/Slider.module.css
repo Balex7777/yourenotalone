@@ -1,12 +1,15 @@
 .slider {
-  width: 850px;
+  width: 100%;
+  max-width: 850px;
   margin: auto;
 }
 
 .slide {
-  height: 700px;
-  width: 700px;
-  object-fit: contain;
+  position: relative;
+  max-width: 80%;
+  object-fit: cover;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .customDots li button {

@@ -5,16 +5,6 @@
   margin: -75px 0 50px;
 }
 
-.hiddenHr {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 4px;
-  min-width: 550px;
-  background-color: #f4eee4;
-  z-index: 9;
-}
-
 .inner {
   position: relative;
   max-width: 1250px;
@@ -39,12 +29,7 @@
   line-height: 50px;
   width: 540px;
   margin-left: calc(50% - 570px);
-}
-
-.questionsB {
-  min-width: 550px;
-  left: calc(50% - 575px);
-  transform: translateX(0);
+  background-color: #f4eee4;
 }
 
 .note {
@@ -77,4 +62,54 @@
   height: 700px;
   margin: auto;
   margin-top: 0;
+}
+
+@media (max-width: 1375px) {
+  .photo {
+    display: none;
+  }
+  .inner {
+    padding: 25px;
+  }
+  .questions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .exclamationMark {
+    font-size: 100px;
+    top: 15px;
+    left: 20px;
+  }
+  .title {
+    position: relative;
+    margin: auto;
+  }
+  .questionsB {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .exclamationMark {
+    font-size: 200px;
+    top: 10px;
+    left: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 30px;
+    width: auto;
+  }
+  .noteText {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .inner {
+    margin-top: 50px;
+  }
+  #questions {
+    margin-top: 0px;
+  }
 }
